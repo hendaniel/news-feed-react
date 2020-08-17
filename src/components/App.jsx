@@ -1,10 +1,12 @@
-import React from 'react';
-import Navigation from './Navigation';
+import React from "react";
+import Navigation from "./Navigation";
+import Header from "./Header"
 
 function App() {
   return (
     <div>
-      <Navigation></Navigation>
+      <Header/>
+      <Navigation/>
     </div>
   );
 }

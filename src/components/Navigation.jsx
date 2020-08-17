@@ -17,27 +17,29 @@ const Navigation = () => {
         />
         <Route
           path="/politica"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) => renderComponent(props, "politica")}
         />
         <Route
           path="/internacionales"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) =>
+            renderComponent(props, "internacionales")
+          }
         />
         <Route
           path="/tecnologia"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) => renderComponent(props, "tecnologia")}
         />
         <Route
           path="/espectaculos"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) => renderComponent(props, "espectaculos")}
         />
         <Route
           path="/deportes"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) => renderComponent(props, "deportes")}
         />
         <Route
           path="/diseño"
-          render={(props, category) => renderComponent(props, "home")}
+          render={(props, category) => renderComponent(props, "diseño")}
         />
       </Switch>
     </main>
