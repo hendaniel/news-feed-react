@@ -21,6 +21,26 @@ const Header = () => {
               Internacionales
             </Link>
           </li>
+          <li>
+            <Link className="nav-item" to="/tecnologia">
+              Tecnología
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-item" to="/espectaculos">
+              Espectáculos
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-item" to="/deportes">
+              Deportes
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-item" to="/diseño">
+              Diseño
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
