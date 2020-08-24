@@ -1,47 +1,14 @@
 import React from "react";
-import NewsPage from "./NewsPage";
+import { navRoutes } from "./../routes";
 import { Switch, Route } from "react-router-dom";
 
-const renderComponent = (props, category) => {
-  return <NewsPage {...props} category={category} />;
-};
-
 const Navigation = () => {
+  const routeComponents = navRoutes.map(({ pathname, component }, key) => (
+    <Route exact path={pathname} component={component} key={key} />
+  ));
   return (
     <main className="main">
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={(props, category) => renderComponent(props, "home")}
-        />
-        <Route
-          path="/politica"
-          render={(props, category) => renderComponent(props, "politica")}
-        />
-        <Route
-          path="/internacionales"
-          render={(props, category) =>
-            renderComponent(props, "internacionales")
-          }
-        />
-        <Route
-          path="/tecnologia"
-          render={(props, category) => renderComponent(props, "tecnologia")}
-        />
-        <Route
-          path="/espectaculos"
-          render={(props, category) => renderComponent(props, "espectaculos")}
-        />
-        <Route
-          path="/deportes"
-          render={(props, category) => renderComponent(props, "deportes")}
-        />
-        <Route
-          path="/diseño"
-          render={(props, category) => renderComponent(props, "diseño")}
-        />
-      </Switch>
+      <Switch>{routeComponents}</Switch>
     </main>
   );
 };
