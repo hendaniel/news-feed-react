@@ -1,27 +1,4 @@
-.nav-bar {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  background-color: #333;
-  top: 0;
-  width: 100%;
-}
-
-.nav-item {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 25px;
-  text-decoration: none;
-}
-
-.nav-item:hover {
-  background: #ddd;
-  color: black;
-}
-
+// Variables
 $font: "Sofia", sans-serif;
 $font-size: 16px;
 $blue: #0a4870;
@@ -33,6 +10,81 @@ $grey3: #e8e7e7;
 $grey4: #fdfdfd;
 $bluegrey: #49606e;
 $orange: #ec992c;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+// Navbar
+nav {
+  display: flex;
+  justify-content: center;
+}
+.nav-item {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background: #ddd;
+  color: #0a4870;
+}
+
+.nav-bar {
+  border-radius: 25px;
+  height: fit-content;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #0a4870;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
+  li {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      transition: 0.2s;
+      border-radius: 25px;
+    }
+    &:hover {
+      &::before {
+        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+        box-shadow: 0px 3px 20px 0px black;
+        transform: scale(1.2);
+      }
+      color: #0a4870;
+    }
+  }
+}
+
+//News Page
 
 @mixin radius($val) {
   -webkit-border-radius: $val;
@@ -59,15 +111,9 @@ $orange: #ec992c;
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: $font;
-}
-
 h2 {
   color: #0a4870;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .page-content {
@@ -80,13 +126,13 @@ h2 {
 
   .news-card {
     position: relative;
-    width: 500px;
-    height: 550px;
+    width: 300px;
+    height: 350px;
     display: flex;
-    flex: 0 0 500px;
+    flex: 0 0 350px;
     flex-direction: column;
 
-    margin: 20px;
+    margin: 40px 20px;
     margin-bottom: 30px;
     @include radius(10px);
 
@@ -108,14 +154,12 @@ h2 {
       left: 0;
       right: 0;
       bottom: 0;
-
       background: rgba(10, 72, 112, 0);
-
       transition: 0.3s;
     }
 
     .new-container {
-      height: 200px;
+      height: 100px;
       .content {
         position: relative;
         opacity: 0;
@@ -125,7 +169,7 @@ h2 {
         height: 100%;
         width: 100%;
 
-        transform: translateY(-200px);
+        transform: translateY(-100px);
 
         transition: 0.3s;
 
@@ -157,21 +201,15 @@ h2 {
 
     .informations-container {
       flex: 1 0 auto;
-
       padding: 20px;
-
       background: $grey2;
-
-      transform: translateY(206px);
-
+      transform: translateY(100px);
       transition: 0.3s;
 
       .title {
         position: relative;
-
         padding-bottom: 10px;
         margin-bottom: 10px;
-
         font-weight: bold;
         font-size: 1.2em;
 
@@ -182,12 +220,9 @@ h2 {
           bottom: 0;
           left: 0;
           right: 0;
-
           height: 3px;
           width: 50px;
-
           margin: auto;
-
           background: $blue;
         }
       }
@@ -196,7 +231,6 @@ h2 {
         display: flex;
         align-items: center;
         justify-content: center;
-
         margin-top: 10px;
 
         .icon {
@@ -206,20 +240,15 @@ h2 {
 
       .more-information {
         opacity: 0;
-
         transition: 0.3s;
         .info-and-date-container {
           display: flex;
-
           .box {
             flex: 1 0;
-
             padding: 15px;
             margin-top: 20px;
             @include radius(10px);
-
             background: white;
-
             font-weight: bold;
             font-size: 0.9em;
 
@@ -229,14 +258,12 @@ h2 {
 
             &.info {
               color: $orange;
-
               margin-right: 10px;
             }
           }
         }
         .disclaimer {
           margin-top: 20px;
-
           font-size: 0.8em;
           color: $grey;
         }
