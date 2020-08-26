@@ -99,13 +99,14 @@ nav {
   .new-container {
     .content {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(20px);
     }
   }
 
   .informations-container {
-    transform: translateY(0px);
+    transform: translateY(60px);
     .more-information {
+      margin-top: 20px;
       opacity: 1;
     }
   }
@@ -113,7 +114,7 @@ nav {
 
 h2 {
   color: #0a4870;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .page-content {
@@ -126,13 +127,13 @@ h2 {
 
   .news-card {
     position: relative;
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    height: 370px;
     display: flex;
-    flex: 0 0 350px;
+    flex: 0 0 370px;
     flex-direction: column;
 
-    margin: 40px 20px;
+    margin: 40px 10px;
     margin-bottom: 30px;
     @include radius(10px);
 
@@ -203,7 +204,7 @@ h2 {
       flex: 1 0 auto;
       padding: 20px;
       background: $grey2;
-      transform: translateY(100px);
+      transform: translateY(90px);
       transition: 0.3s;
 
       .title {
@@ -226,47 +227,9 @@ h2 {
           background: $blue;
         }
       }
-
-      .price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-
-        .icon {
-          margin-right: 10px;
-        }
-      }
-
       .more-information {
         opacity: 0;
         transition: 0.3s;
-        .info-and-date-container {
-          display: flex;
-          .box {
-            flex: 1 0;
-            padding: 15px;
-            margin-top: 20px;
-            @include radius(10px);
-            background: white;
-            font-weight: bold;
-            font-size: 0.9em;
-
-            .icon {
-              margin-bottom: 5px;
-            }
-
-            &.info {
-              color: $orange;
-              margin-right: 10px;
-            }
-          }
-        }
-        .disclaimer {
-          margin-top: 20px;
-          font-size: 0.8em;
-          color: $grey;
-        }
       }
     }
 
@@ -284,4 +247,12 @@ h2 {
 
 h1 {
   margin: 10px 20px;
+}
+
+.page-message {
+  margin-top: 10%;
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
