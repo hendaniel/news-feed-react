@@ -2,18 +2,13 @@ import React, { useEffect } from "react";
 import NewItem from "./NewItem";
 import loader from "../assets/loader.gif";
 
-const NewsPage = ({
-  api: { apiFilter, value },
-  news,
-  hasError,
-  isLoading,
-  fetchNews,
-}) => {
+const NewsPage = ({ news, hasError, isLoading, fetchNews, ...props }) => {
+  const { apiFilter, value } = props.api ?? null;
   useEffect(() => {
     fetchNews(apiFilter, value);
   }, []);
 
-  if (!hasError) {
+  if (hasError) {
     return (
       <div className="page-content">
         <div className="page-message">

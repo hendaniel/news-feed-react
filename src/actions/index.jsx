@@ -1,3 +1,5 @@
+import * as moment from "moment";
+
 export const loadingError = (bool) => ({
   type: "LOADING_ERROR",
   hasErrored: bool,
@@ -19,7 +21,12 @@ export const clearNews = () => ({
 
 export const getNews = (filter, value) => {
   const categoryEndpoint = `https://api.canillitapp.com/news/category/${value}`;
-  // const latestEndpoint = `https://api.canillitapp.com/news/latest/${new Date()}`;
+
+  const today = moment().format("YYYY-MM-DD");
+  const latestEndpoint = `https://api.canillitapp.com/latest/${today}`;
+  console.log(latestEndpoint);
+
+  
 
   const news = [];
 
@@ -30,7 +37,7 @@ export const getNews = (filter, value) => {
 
     dispatch(loadingInProgress(true));
 
-    fetch(categoryEndpoint)
+    fetch(latestEndpoint)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
