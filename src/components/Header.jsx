@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navRoutes } from "./../routes";
-import "./../styles.css";
+import "./../styles.scss";
 
 const Header = () => {
   const linkComponents = navRoutes.map(({ pathname, linkname, state }, key) => (

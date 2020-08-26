@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Navigation from "./Navigation";
-import Header from "./Header"
+import Header from "./Header";
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Navigation/>
-    </div>
+    <Fragment>
+      <Header />
+      <Navigation />
+    </Fragment>
   );
 }
 

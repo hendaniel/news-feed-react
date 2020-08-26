@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { navRoutes } from "./../routes";
 import { Switch, Route } from "react-router-dom";
 
@@ -7,9 +7,9 @@ const Navigation = () => {
     <Route exact path={pathname} component={component} key={key} />
   ));
   return (
-    <main className="main">
+    <Fragment>
       <Switch>{routeComponents}</Switch>
-    </main>
+    </Fragment>
   );
 };
 

@@ -1,18 +1,20 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect } from "react";
+import NewItem from "./NewItem";
 
-
-const NewsPage = ({ location, news, hasError, isLoading, fetchNews }) => {
-  const { apiFilter, value } = location.state;
-
-  console.log(hasError);
-
+const NewsPage = ({
+  api: { apiFilter, value },
+  news,
+  hasError,
+  isLoading,
+  fetchNews,
+}) => {
   useEffect(() => {
-
-  }, [news]);
+    fetchNews(apiFilter, value);
+  }, []);
 
   if (hasError) {
     return (
-      <div className="container">
+      <div className="page-message">
         <h6>Error al cargar las noticias</h6>
       </div>
     );
@@ -20,13 +22,19 @@ const NewsPage = ({ location, news, hasError, isLoading, fetchNews }) => {
 
   if (isLoading) {
     return (
-      <div className="container">
+      <div className="page-message" >
         <h6>Cargando noticias…</h6>
       </div>
     );
   }
 
-  return <div className="container"></div>;
+  return (
+    <div className="page-content">
+      {news.map((item) => {
+        return <NewItem item={item} />;
+      })}
+    </div>
+  );
 };
 
 export default NewsPage;

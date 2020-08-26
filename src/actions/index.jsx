@@ -18,12 +18,13 @@ export const clearNews = () => ({
 });
 
 export const getNews = (filter, value) => {
-  console.log('llega aca');
   const categoryEndpoint = `https://api.canillitapp.com/news/category/${value}`;
-  const latestEndpoint = `https://api.canillitapp.com/news/latest/${new Date()}`;
+  // const latestEndpoint = `https://api.canillitapp.com/news/latest/${new Date()}`;
+
+  const news = [];
 
   return (dispatch) => {
-    dispatch(clearRepos());
+    dispatch(clearNews());
 
     dispatch(loadingError(false));
 
@@ -40,7 +41,12 @@ export const getNews = (filter, value) => {
         return response;
       })
       .then((response) => response.json())
-      .then((news) => dispatch(loadingSuccess(news)))
+      .then((json) => {
+        json.forEach((item) => {
+          if (news.length < 10) news.push(item);
+        });
+        dispatch(loadingSuccess(news));
+      })
       .catch(() => dispatch(loadingError(true)));
   };
 };
