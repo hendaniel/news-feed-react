@@ -20,7 +20,6 @@ export const clearNews = () => ({
 
 export const getNews = (filter, value) => {
   let endpoint = "https://api.canillitapp.com";
-  const news = [];
   switch (filter) {
     case Constants.CATEGORY_FILTER:
       endpoint = `${endpoint}/news/category/${value}`;
@@ -51,10 +50,8 @@ export const getNews = (filter, value) => {
       })
       .then((response) => response.json())
       .then((json) => {
-        json.forEach((item) => {
-          if (news.length < 10) news.push(item);
-        });
-        dispatch(loadingSuccess(news));
+        json = json.slice(0, 10);
+        dispatch(loadingSuccess(json));
       })
       .catch(() => dispatch(loadingError(true)));
   };
