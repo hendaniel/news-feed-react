@@ -9,9 +9,9 @@ const NewsPage = ({
   hasError,
   isLoading,
   newsByCategory,
-  newsBySearch,
   newsByDate,
-  match,
+  newsBySearch,
+  match
 }) => {
   const getNews = () => {
     if (match.params.hasOwnProperty("filter")) {
@@ -22,6 +22,9 @@ const NewsPage = ({
     }
     if (match.params.hasOwnProperty("id")) {
       newsByCategory(match.params.id);
+    }
+    if (match.params.hasOwnProperty("word")) {
+      newsBySearch(match.params.word);
     }
   };
 

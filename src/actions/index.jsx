@@ -1,3 +1,4 @@
+import * as Constants from "../constants";
 export const loadingError = (bool) => ({
   type: "LOADING_ERROR",
   hasErrored: bool,
@@ -21,10 +22,10 @@ export const getNews = (filter, value) => {
   let endpoint = "https://api.canillitapp.com";
   const news = [];
   switch (filter) {
-    case "category":
+    case Constants.CATEGORY_FILTER:
       endpoint = `${endpoint}/news/category/${value}`;
       break;
-    case "search":
+    case Constants.SEARCH_FILTER:
       endpoint = `${endpoint}/search/${value}`;
       break;
     default:

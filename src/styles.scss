@@ -36,7 +36,8 @@ nav {
   text-decoration: none;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.selected-nav {
   background: #ddd;
   color: #0a4870;
 }
@@ -254,5 +255,38 @@ h1 {
   img {
     max-width: 100px;
     max-height: 100px;
+  }
+}
+
+.search-bar {
+  margin: 50px 0 0 0;
+  display: flex;
+
+  input {
+    outline: none;
+    padding-left: 10px;
+    border-radius: 25px;
+    border-color: #0a4870;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 2px;
+    color: #0a4870;
+    font-size: 1em;
+    font-weight: 400;
+    &::placeholder {
+      color: #0a4870;
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+  button {
+    outline: none;
+    background-color: white !important; /* Green */
+    border: none;
+    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-size: contain;
   }
 }
