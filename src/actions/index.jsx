@@ -1,5 +1,3 @@
-import * as moment from "moment";
-
 export const loadingError = (bool) => ({
   type: "LOADING_ERROR",
   hasErrored: bool,
@@ -20,15 +18,18 @@ export const clearNews = () => ({
 });
 
 export const getNews = (filter, value) => {
-  const categoryEndpoint = `https://api.canillitapp.com/news/category/${value}`;
-
-  const today = moment().format("YYYY-MM-DD");
-  const latestEndpoint = `https://api.canillitapp.com/latest/${today}`;
-  console.log(latestEndpoint);
-
-  
-
+  let endpoint = "https://api.canillitapp.com";
   const news = [];
+  switch (filter) {
+    case "category":
+      endpoint = `${endpoint}/news/category/${value}`;
+      break;
+    case "search":
+      endpoint = `${endpoint}/search/${value}`;
+      break;
+    default:
+      endpoint = `${endpoint}/latest/${value}`;
+  }
 
   return (dispatch) => {
     dispatch(clearNews());
@@ -37,7 +38,7 @@ export const getNews = (filter, value) => {
 
     dispatch(loadingInProgress(true));
 
-    fetch(latestEndpoint)
+    fetch(endpoint)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);

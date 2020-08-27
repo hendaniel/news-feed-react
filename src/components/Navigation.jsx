@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
-import { navRoutes } from "./../routes";
 import { Switch, Route } from "react-router-dom";
+import News from "../containers/News";
 
 const Navigation = () => {
-  const routeComponents = navRoutes.map(({ pathname, component }, key) => (
-    <Route exact path={pathname} component={component} key={key} />
-  ));
   return (
     <Fragment>
-      <Switch>{routeComponents}</Switch>
+      <Switch>
+        <Route exact path="/category/:id" component={News} />
+        <Route exact path="/:filter" component={News} />
+      </Switch>
     </Fragment>
   );
 };

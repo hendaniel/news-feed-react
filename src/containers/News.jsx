@@ -3,13 +3,14 @@ import { getNews } from "../actions/index";
 import NewsPage from "../components/NewsPage";
 
 const mapStateToProps = (state, props) => ({
-  api: props.location.state,
   news: state.news,
   hasError: state.loadingError,
   isLoading: state.loadingInProgress,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchNews: (apiFilter, value) => dispatch(getNews(apiFilter, value)),
+  newsByCategory: (value) => dispatch(getNews("category", value)),
+  newsByDate: (value) => dispatch(getNews("latest", value)),
+  newsBySearch: (value) => dispatch(getNews("search", value)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);
