@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import NewItem from "./NewItem";
 import loader from "../assets/loader.gif";
 import * as moment from "moment";
-import { getNews } from "../actions";
 
 const NewsPage = ({
   news,
