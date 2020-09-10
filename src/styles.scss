@@ -27,10 +27,12 @@ body {
 nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 .nav-item {
   float: left;
-  display: block;
+  display: flex;
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
@@ -38,14 +40,14 @@ nav {
 
 .nav-item:hover,
 .selected-nav {
-  background: #ddd;
-  color: #0a4870;
+  color: #45d2f7;
 }
 
 .nav-bar {
   border-radius: 25px;
   height: fit-content;
   display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: #0a4870;
   -webkit-backdrop-filter: blur(10px);
@@ -76,7 +78,6 @@ nav {
     }
     &:hover {
       &::before {
-        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
         box-shadow: 0px 3px 20px 0px black;
         transform: scale(1.2);
       }
@@ -119,20 +120,19 @@ h2 {
 }
 
 .page-content {
+  margin: 2%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 
-  list-style: none;
-  padding: 0;
-
   .news-card {
     position: relative;
-    width: 350px;
-    height: 370px;
+    width: 300px;
+    height: 350px;
     display: flex;
     flex: 0 0 370px;
     flex-direction: column;
+    box-shadow: inset 0 0 10px #6e6e6e52;
 
     margin: 40px 10px;
     margin-bottom: 30px;
@@ -259,7 +259,7 @@ h1 {
 }
 
 .search-bar {
-  margin: 50px 0 0 0;
+  margin: 50px 0 0 20px;
   display: flex;
 
   input {

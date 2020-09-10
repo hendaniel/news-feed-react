@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { withRouter } from "react-router-dom";
 import search_icon from "../assets/search_icon.png";
 
-const SearchBar = ({history}) => {
+const SearchBar = ({ history }) => {
   const inputRef = useRef();
   const getNews = () => {
     history.push(`/search/${inputRef.current.value}`);
@@ -10,7 +10,14 @@ const SearchBar = ({history}) => {
   };
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Búsqueda por palabra" ref={inputRef} />
+      <input
+        type="text"
+        onKeyUp={(e) => {
+          if (e.key === "Enter") getNews();
+        }}
+        placeholder="Búsqueda por palabra"
+        ref={inputRef}
+      />
       <button
         style={{ backgroundImage: `url("${search_icon}")` }}
         type="button"
