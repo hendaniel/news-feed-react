@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/NewsFeedReact/static/css/main.5e900a3f.chunk.css",
-    "main.js": "/NewsFeedReact/static/js/main.a1163f0a.chunk.js",
-    "main.js.map": "/NewsFeedReact/static/js/main.a1163f0a.chunk.js.map",
-    "runtime-main.js": "/NewsFeedReact/static/js/runtime-main.eac3e574.js",
-    "runtime-main.js.map": "/NewsFeedReact/static/js/runtime-main.eac3e574.js.map",
-    "static/js/2.e8a234af.chunk.js": "/NewsFeedReact/static/js/2.e8a234af.chunk.js",
-    "static/js/2.e8a234af.chunk.js.map": "/NewsFeedReact/static/js/2.e8a234af.chunk.js.map",
-    "index.html": "/NewsFeedReact/index.html",
-    "precache-manifest.33872e913038c436ddb6da7cd69980f2.js": "/NewsFeedReact/precache-manifest.33872e913038c436ddb6da7cd69980f2.js",
-    "service-worker.js": "/NewsFeedReact/service-worker.js",
-    "static/css/main.5e900a3f.chunk.css.map": "/NewsFeedReact/static/css/main.5e900a3f.chunk.css.map",
-    "static/js/2.e8a234af.chunk.js.LICENSE.txt": "/NewsFeedReact/static/js/2.e8a234af.chunk.js.LICENSE.txt",
-    "static/media/blank_image.jpg": "/NewsFeedReact/static/media/blank_image.9968159c.jpg",
-    "static/media/loader.gif": "/NewsFeedReact/static/media/loader.e4b6323e.gif"
+    "main.css": "/news-feed-react/static/css/main.5e900a3f.chunk.css",
+    "main.js": "/news-feed-react/static/js/main.a1163f0a.chunk.js",
+    "main.js.map": "/news-feed-react/static/js/main.a1163f0a.chunk.js.map",
+    "runtime-main.js": "/news-feed-react/static/js/runtime-main.c3d6f0b4.js",
+    "runtime-main.js.map": "/news-feed-react/static/js/runtime-main.c3d6f0b4.js.map",
+    "static/js/2.e8a234af.chunk.js": "/news-feed-react/static/js/2.e8a234af.chunk.js",
+    "static/js/2.e8a234af.chunk.js.map": "/news-feed-react/static/js/2.e8a234af.chunk.js.map",
+    "index.html": "/news-feed-react/index.html",
+    "precache-manifest.19064aec55db3353590bfe136590ab7e.js": "/news-feed-react/precache-manifest.19064aec55db3353590bfe136590ab7e.js",
+    "service-worker.js": "/news-feed-react/service-worker.js",
+    "static/css/main.5e900a3f.chunk.css.map": "/news-feed-react/static/css/main.5e900a3f.chunk.css.map",
+    "static/js/2.e8a234af.chunk.js.LICENSE.txt": "/news-feed-react/static/js/2.e8a234af.chunk.js.LICENSE.txt",
+    "static/media/blank_image.jpg": "/news-feed-react/static/media/blank_image.9968159c.jpg",
+    "static/media/loader.gif": "/news-feed-react/static/media/loader.e4b6323e.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.eac3e574.js",
+    "static/js/runtime-main.c3d6f0b4.js",
     "static/js/2.e8a234af.chunk.js",
     "static/css/main.5e900a3f.chunk.css",
     "static/js/main.a1163f0a.chunk.js"
