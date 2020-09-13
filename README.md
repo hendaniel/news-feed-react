@@ -1,6 +1,6 @@
 ## Info
 
-Esta aplicación se encuentra deployada en https://hendaniel.github.io/NewsFeedReact/#/home , es una aplicación web con patrón redux en react para el consumo de un API, con estado global y routing.
+Esta aplicación se encuentra deployada en https://hendaniel.github.io/news-feed-react/#/home , es una aplicación web con patrón redux en react para el consumo de un API, con estado global y routing.
 
 ## Available Scripts
 
